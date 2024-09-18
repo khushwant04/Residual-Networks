@@ -1,6 +1,6 @@
 import logging 
 import os 
-from config_loader import load_config
+from src.utils.config_loader import load_config
 
 def setup_logging(config):
     """"Sets up the logging configuration based on the provided config"""

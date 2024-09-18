@@ -1,4 +1,4 @@
-experiment_name: "ResNet-Cifar100 Experiment"
+experiment_name: "ResNet-Cifar10 Experiment"
 logging:
   log_file: "cifar100_experiment.log"
   log_level: "INFO"

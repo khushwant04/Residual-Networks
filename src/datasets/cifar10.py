@@ -17,16 +17,16 @@ def get_dataloaders(config_path='config/resnet-cifar10.yaml'):
     num_workers = config['data']['num_workers']
     download_path = config['data']['download_path']
 
-    if dataset_name != 'CIFAR100':
+    if dataset_name != 'CIFAR10':
         raise ValueError("Please the dataset configurations.")
     
-    logger.info('Loading CIFAR-100 dataset with the following parameters: ')
+    logger.info('Loading CIFAR-10 dataset with the following parameters: ')
     logger.info(f'Batch size: {batch_size}')
     logger.info(f"Number of workers: {num_workers}")
     logger.info(f"Download Path: {download_path}")
 
     # load the Train dataset
-    train_dataset = datasets.CIFAR100(
+    train_dataset = datasets.CIFAR10(
         root=download_path,
         train=True,
         download=True,
@@ -34,7 +34,7 @@ def get_dataloaders(config_path='config/resnet-cifar10.yaml'):
     )
 
     # load the Test dataset
-    val_dataset = datasets.CIFAR100(
+    val_dataset = datasets.CIFAR10(
         root=download_path,
         train=False,
         download=True,
@@ -63,7 +63,21 @@ def get_dataloaders(config_path='config/resnet-cifar10.yaml'):
 
     return train_loader, val_loader
 
+def main():
+    from src.utils.resnet_logging import setup_logging
+    config = load_config('config/resnet-cifar10.yaml')
+    setup_logging(config)
+    
+    # Get DataLoaders
+    train_loader, val_loader = get_dataloaders()
+    
+    # Print one tensor from the train_loader
+    for images, labels in train_loader:
+        print(f"Image tensor shape: {images.shape}")
+        print(f"Labels: {labels}")
+        break  # Print only one batch and exit loop
+
 if __name__ == "__main__":
-    get_dataloaders()
+    main()
 
     

@@ -63,7 +63,23 @@ def get_dataloaders(config_path='config/resnet-cifar100.yaml'):
 
     return train_loader, val_loader
 
+
+def main():
+    from src.utils.resnet_logging import setup_logging
+    config = load_config('config/resnet-cifar100.yaml')
+    setup_logging(config)
+    
+    # Get DataLoaders
+    train_loader, val_loader = get_dataloaders()
+    
+    # Print one tensor from the train_loader
+    for images, labels in train_loader:
+        print(f"Image tensor shape: {images.shape}")
+        print(f"Labels: {labels}")
+        break  # Print only one batch and exit loop
+
 if __name__ == "__main__":
-    get_dataloaders()
+    main()
 
     
+
