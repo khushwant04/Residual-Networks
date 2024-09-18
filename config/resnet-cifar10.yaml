@@ -1,0 +1,21 @@
+experiment_name: "ResNet-Cifar100 Experiment"
+logging:
+  log_file: "cifar100_experiment.log"
+  log_level: "INFO"
+
+data:
+  dataset_name: "CIFAR10"
+  batch_size: 256
+  num_workers: 4
+  download_path: "./data"
+
+training:
+  num_epochs: 50
+  learning_rate: 0.001
+  scheduler:
+    type: "StepLR"
+    step_size: 10
+    gamma: 0.1
+    patience: 5
+    T_max: 50
+    min_lr: 1e-5  
