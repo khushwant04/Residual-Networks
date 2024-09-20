@@ -1,10 +1,8 @@
-from sympy import true
 import logging
-from src.transforms import get_transforms
 from torchvision import datasets
 from torch.utils.data import DataLoader
 from src.utils.config_loader import load_config
-
+from src.transforms import get_transforms
 
 logger = logging.getLogger(__name__)
 
@@ -18,14 +16,14 @@ def get_dataloaders(config_path='config/resnet-cifar100.yaml'):
     download_path = config['data']['download_path']
 
     if dataset_name != 'CIFAR100':
-        raise ValueError("Please the dataset configurations.")
-    
-    logger.info('Loading CIFAR-100 dataset with the following parameters: ')
-    logger.info(f'Batch size: {batch_size}')
-    logger.info(f"Number of workers: {num_workers}")
-    logger.info(f"Download Path: {download_path}")
+        raise ValueError(f"Expected dataset name 'CIFAR100', got '{dataset_name}' instead.")
 
-    # load the Train dataset
+    logger.info('Loading CIFAR-100 dataset with the following parameters:')
+    logger.info(f'Batch size: {batch_size}')
+    logger.info(f'Number of workers: {num_workers}')
+    logger.info(f'Download path: {download_path}')
+
+    # Load the train dataset
     train_dataset = datasets.CIFAR100(
         root=download_path,
         train=True,
@@ -33,7 +31,7 @@ def get_dataloaders(config_path='config/resnet-cifar100.yaml'):
         transform=get_transforms(train=True)
     )
 
-    # load the Test dataset
+    # Load the test dataset
     val_dataset = datasets.CIFAR100(
         root=download_path,
         train=False,
@@ -57,21 +55,20 @@ def get_dataloaders(config_path='config/resnet-cifar100.yaml'):
         pin_memory=True
     )
 
-
-    logger.info(f"Training dataset size: {len(train_dataset)} samples.")
-    logger.info(f"Validation dataset size: {len(val_dataset)} samples.")
+    logger.info(f'Training dataset size: {len(train_dataset)} samples.')
+    logger.info(f'Validation dataset size: {len(val_dataset)} samples.')
 
     return train_loader, val_loader
 
 
 def main():
     from src.utils.resnet_logging import setup_logging
-    config = load_config('config/resnet-cifar100.yaml')
+    config = load_config('config/resenet-101-cifar100.yaml')
     setup_logging(config)
-    
+
     # Get DataLoaders
     train_loader, val_loader = get_dataloaders()
-    
+
     # Print one tensor from the train_loader
     for images, labels in train_loader:
         print(f"Image tensor shape: {images.shape}")
@@ -80,6 +77,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-    
-

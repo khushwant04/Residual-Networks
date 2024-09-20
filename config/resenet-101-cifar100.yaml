@@ -19,7 +19,7 @@ data:
 
 # Model Configuration
 model:
-  name: "ResNet50"  # Options: ResNet50, ResNet101, ResNet152
+  name: "ResNet101"  # Options: ResNet50, ResNet101, ResNet152
   num_classes: 100
   input_channels: 3
 

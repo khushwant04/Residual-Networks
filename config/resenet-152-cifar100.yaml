@@ -19,14 +19,14 @@ data:
 
 # Model Configuration
 model:
-  name: "ResNet50"  # Options: ResNet50, ResNet101, ResNet152
+  name: "ResNet152"  # Options: ResNet50, ResNet101, ResNet152
   num_classes: 100
   input_channels: 3
 
 # Optimizer Configuration
 optimizer:
   name: "Adam"  # Options: Adam, SGD, etc.
-  lr: 0.001
+  lr: 0.0001
   weight_decay: 0.0001
 
 # Scheduler Configuration

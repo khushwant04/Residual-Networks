@@ -1,0 +1,43 @@
+2024-09-19 19:10:29 - INFO - Starting experiment: ResNet-Cifar100 Experiment
+2024-09-19 19:10:29 - INFO - Using device: cuda
+2024-09-19 19:10:30 - INFO - Number of training batches: 176
+2024-09-19 19:10:30 - INFO - Number of validation batches: 20
+2024-09-19 19:10:30 - INFO - Number of test batches: 40
+2024-09-19 19:10:30 - INFO - Initialized model: ResNet50
+2024-09-19 19:10:30 - INFO - Initialized optimizer: Adam with LR: 0.001
+2024-09-19 19:10:30 - INFO - Initialized scheduler: StepLR
+2024-09-19 19:10:30 - INFO - Starting training for 50 epochs
+2024-09-19 19:10:40 - INFO - Train Epoch 1: Loss: 4.29041 | Accuracy: 8.43
+2024-09-19 19:12:25 - INFO - Starting experiment: ResNet-Cifar100 Experiment
+2024-09-19 19:12:25 - INFO - Using device: cuda
+2024-09-19 19:12:26 - INFO - Number of training batches: 176
+2024-09-19 19:12:26 - INFO - Number of validation batches: 20
+2024-09-19 19:12:26 - INFO - Number of test batches: 40
+2024-09-19 19:12:26 - INFO - Initialized model: ResNet152
+2024-09-19 19:12:26 - INFO - Initialized optimizer: Adam with LR: 0.001
+2024-09-19 19:12:26 - INFO - Initialized scheduler: StepLR
+2024-09-19 19:12:26 - INFO - Starting training for 50 epochs
+2024-09-19 19:13:46 - INFO - Starting experiment: ResNet-Cifar100 Experiment
+2024-09-19 19:13:47 - INFO - Using device: cuda
+2024-09-19 19:13:48 - INFO - Number of training batches: 176
+2024-09-19 19:13:48 - INFO - Number of validation batches: 20
+2024-09-19 19:13:48 - INFO - Number of test batches: 40
+2024-09-19 19:13:48 - INFO - Initialized model: ResNet152
+2024-09-19 19:13:48 - INFO - Initialized optimizer: Adam with LR: 0.0001
+2024-09-19 19:13:48 - INFO - Initialized scheduler: CosineAnnealingLR
+2024-09-19 19:13:48 - INFO - Starting training for 50 epochs
+2024-09-19 19:14:11 - INFO - Train Epoch 1: Loss: 4.46515 | Accuracy: 3.09
+2024-09-19 19:14:32 - INFO - Starting experiment: ResNet-Cifar100 Experiment
+2024-09-19 19:14:32 - INFO - Using device: cuda
+2024-09-19 19:14:33 - INFO - Number of training batches: 176
+2024-09-19 19:14:33 - INFO - Number of validation batches: 20
+2024-09-19 19:14:33 - INFO - Number of test batches: 40
+2024-09-19 19:14:34 - INFO - Initialized model: ResNet152
+2024-09-19 19:14:34 - INFO - Initialized optimizer: Adam with LR: 0.0001
+2024-09-19 19:14:34 - INFO - Initialized scheduler: StepLR
+2024-09-19 19:14:34 - INFO - Starting training for 50 epochs
+2024-09-19 19:14:56 - INFO - Train Epoch 1: Loss: 4.45910 | Accuracy: 3.01
+2024-09-19 19:15:21 - INFO - Train Epoch 2: Loss: 3.88257 | Accuracy: 9.20
+2024-09-19 19:15:48 - INFO - Train Epoch 3: Loss: 3.51196 | Accuracy: 15.43
+2024-09-19 19:16:15 - INFO - Train Epoch 4: Loss: 3.16587 | Accuracy: 21.72
+2024-09-19 19:16:39 - INFO - Train Epoch 5: Loss: 2.83274 | Accuracy: 28.03
