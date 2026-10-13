@@ -2,3 +2,14 @@ data
 *__pycache__
 *__init__.py
 logs
+
+# Python / tooling
+*.pyc
+.venv/
+venv/
+.env
+.ipynb_checkpoints/
+
+# Experiment outputs
+runs/
+*.log

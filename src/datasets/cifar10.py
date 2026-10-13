@@ -1,4 +1,3 @@
-from sympy import true
 import logging
 from src.transforms import get_transforms
 from torchvision import datasets

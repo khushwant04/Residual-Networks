@@ -1,0 +1,5 @@
+torch
+torchvision
+pyyaml
+tqdm
+tensorboard
